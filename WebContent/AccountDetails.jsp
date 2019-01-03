@@ -2,12 +2,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+    <title>Banking Application</title>
+    <link rel="stylesheet" type="text/css" href="resources/css/headerStyle.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/formStyle.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/footerStyle.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/tableStyle.css">
 </head>
+
 <body>
-	<table>
+        <div class="header">
+            <h1>Money Money Bank </h1>
+            <div class="details">
+                    <p>Contac us - 22450 57111<p>
+                            <p>Email - <i style="color: blue">mm_bank@gmail.com</i></p>
+            </div>
+        </div>
+        <nav id="menu">
+            <ul>
+            	<jsp:include page="homeLink.html"></jsp:include>
+			</ul>
+        </nav>
+
+        <h1 align="center">Fund Transfer</h1>
+                 <hr>
+	<table style="width:100%">
 		<tr>
 			<th><a href="sortByNumber.mm">Account Number</a></th>
 			<th><a href="sortByName.mm">Holder Name</a></th>
@@ -39,27 +58,10 @@
 			</jstl:forEach>
 		</jstl:if>
 	</table>
-	<div>
-		<jsp:include page="homeLink.html"></jsp:include>
-	</div>
+  <footer>Copyscape © 2018 Money Money Bank. All rights reserved. Terms of Use.</footer>
+    <!-- <object  type="text/html" data="resources/include/footer.html"></object> -->
+    
 	
-	<script type="text/javascript">
-	$(function(){
-		$("#nameDesc").hide();
-	});
-	
-	$("#nameAsc").click(function(){
-		alert("ascending");
-		$("#nameAsc").hide();
-		$("#nameDesc").show();
-	});
-	
-	$("#nameDesc").click(function(){
-		alert("descending");
-		$("#nameAsc").show();
-		$("#nameDesc").hide();
-	});
-	</script>
 </body>
 </html>
 
