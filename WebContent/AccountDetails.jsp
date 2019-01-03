@@ -9,10 +9,10 @@
 <body>
 	<table>
 		<tr>
-			<th>Account Number</th>
-			<th><a href="sortByName.mm" >Holder Name</a></th>
-			<th>Account Balance</th>
-			<th>Salary</th>
+			<th><a href="sortByNumber.mm">Account Number</a></th>
+			<th><a href="sortByName.mm">Holder Name</a></th>
+			<th><a href="sortByBalance.mm">Account Balance</a></th>
+			<th><a href="sortBySalary.mm">Salary</a></th>
 			<th>Over Draft Limit</th>
 			<th>Type Of Account</th>
 		</tr>
@@ -42,6 +42,24 @@
 	<div>
 		<jsp:include page="homeLink.html"></jsp:include>
 	</div>
+	
+	<script type="text/javascript">
+	$(function(){
+		$("#nameDesc").hide();
+	});
+	
+	$("#nameAsc").click(function(){
+		alert("ascending");
+		$("#nameAsc").hide();
+		$("#nameDesc").show();
+	});
+	
+	$("#nameDesc").click(function(){
+		alert("descending");
+		$("#nameAsc").show();
+		$("#nameDesc").hide();
+	});
+	</script>
 </body>
 </html>
 

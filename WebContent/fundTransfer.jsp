@@ -19,5 +19,8 @@
 		<br>
 		<button type="submit">Submit</button>
 	</form>
+	<div>
+		<jsp:include page="homeLink.html"></jsp:include>
+	</div>
 </body>
 </html>
